@@ -19,7 +19,7 @@ class _NavBarState extends State<NavBar> {
 
   Widget MobileNavBar() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: EdgeInsets.symmetric(horizontal: 20),
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,11 +47,11 @@ class _NavBarState extends State<NavBar> {
               navButton('Feedback'),
             ],
           ),
-          SizedBox(
+          Container(
             height: 45,
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text('Request a Demo'),
+              child: Text('Request a Demo'),
             ),
           )
 
@@ -62,10 +62,10 @@ class _NavBarState extends State<NavBar> {
 
   Widget navButton(String text) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(horizontal: 10),
       child: TextButton(
         onPressed: () {},
-        child: Text(text, style: const TextStyle(color: Colors.black, fontSize: 18),),
+        child: Text(text, style: TextStyle(color: Colors.black, fontSize: 18),),
       ),
     );
   }
